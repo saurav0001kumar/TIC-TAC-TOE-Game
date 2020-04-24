@@ -1,2 +1,2 @@
 # TIC-TAC-TOE-Game
-An interesting android/ios game using Flutter.
+An interesting game for android/ios using Flutter.

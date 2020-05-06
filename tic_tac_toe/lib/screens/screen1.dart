@@ -26,7 +26,7 @@ class screen1 extends StatelessWidget {
                     elevation: 10,
                     backgroundColor: Colors.white,
                     title: Text("About Game!"),
-                    content: Text("Tic-Tac-Toe Version-1.0 . Thanks for playing this game. For any help or feedback, contact the developer at 'saurav0001kumar@gmail.com' or Visit: https://saurav0001kumar.ml",
+                    content: Text("Tic-Tac-Toe Version-2.0 . Thanks for playing this game. For any help or feedback, contact the developer at 'saurav0001kumar@gmail.com' or Visit: https://saurav0001kumar.ml",
                     style: TextStyle(fontSize: 16),
 
                     ),

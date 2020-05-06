@@ -45,10 +45,10 @@ body: MyApp(),
   }
 
   void goto1(context) async {
-    bool result = await Navigator.push(context,MaterialPageRoute(builder: (context) {
-      return screen1();
-    }));
-
+//    bool result = await Navigator.push(context,MaterialPageRoute(builder: (context) {
+//      return screen1();
+//    }));
+    Navigator.pop(context);
 
   }
 
@@ -470,22 +470,182 @@ DropdownButton(
     checkcross();
     if(turn==1)
       {
-        boxnumberx=box[random.nextInt(box.length)];
-        switch(boxnumberx)
-        {
 
-          case 0: b0=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 1: b1=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 2: b2=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 3: b3=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 4: b4=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 5: b5=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 6: b6=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 7: b7=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          case 8: b8=Icon(Icons.clear, size: 70, color: Colors.black,); break;
-          default:break;
+        //HARD level logic starts here
+        if(box.contains(4))
+          {
+            boxnumberx=4;
+            b4=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+        else
+          if(zeroes.contains(0) && zeroes.contains(1) && box.contains(2))
+            {
+              boxnumberx=2;
+              b2=Icon(Icons.clear, size: 70, color: Colors.black,);
+            }
+          else
+          if(zeroes.contains(0) && zeroes.contains(2) && box.contains(1))
+          {
+            boxnumberx=1;
+            b1=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(2) && zeroes.contains(1) && box.contains(0))
+          {
+            boxnumberx=0;
+            b0=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(3) && zeroes.contains(4) && box.contains(5))
+          {
+            boxnumberx=5;
+            b5=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(3) && zeroes.contains(5) && box.contains(4))
+          {
+            boxnumberx=4;
+            b4=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(4) && zeroes.contains(5) && box.contains(3))
+          {
+            boxnumberx=3;
+            b3=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(6) && zeroes.contains(7) && box.contains(8))
+          {
+            boxnumberx=8;
+            b8=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(6) && zeroes.contains(8) && box.contains(7))
+          {
+            boxnumberx=7;
+            b7=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(7) && zeroes.contains(8) && box.contains(6))
+          {
+            boxnumberx=6;
+            b6=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(0) && zeroes.contains(3) && box.contains(6))
+          {
+            boxnumberx=6;
+            b6=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(0) && zeroes.contains(6) && box.contains(3))
+          {
+            boxnumberx=3;
+            b3=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(3) && zeroes.contains(6) && box.contains(0))
+          {
+            boxnumberx=0;
+            b0=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(1) && zeroes.contains(4) && box.contains(7))
+          {
+            boxnumberx=7;
+            b7=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(1) && zeroes.contains(7) && box.contains(4))
+          {
+            boxnumberx=4;
+            b4=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(7) && zeroes.contains(4) && box.contains(1))
+          {
+            boxnumberx=1;
+            b1=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
 
-        }
+          else
+          if(zeroes.contains(2) && zeroes.contains(5) && box.contains(8))
+          {
+            boxnumberx=8;
+            b8=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(2) && zeroes.contains(8) && box.contains(5))
+          {
+            boxnumberx=5;
+            b5=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(5) && zeroes.contains(8) && box.contains(2))
+          {
+            boxnumberx=2;
+            b2=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(0) && zeroes.contains(4) && box.contains(8))
+          {
+            boxnumberx=8;
+            b8=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(0) && zeroes.contains(8) && box.contains(4))
+          {
+            boxnumberx=4;
+            b4=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(4) && zeroes.contains(8) && box.contains(0))
+          {
+            boxnumberx=0;
+            b0=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(2) && zeroes.contains(4) && box.contains(6))
+          {
+            boxnumberx=6;
+            b6=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(2) && zeroes.contains(6) && box.contains(4))
+          {
+            boxnumberx=4;
+            b4=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+          else
+          if(zeroes.contains(4) && zeroes.contains(6) && box.contains(2))
+          {
+            boxnumberx=2;
+            b2=Icon(Icons.clear, size: 70, color: Colors.black,);
+          }
+
+        else
+          {
+            boxnumberx=box[random.nextInt(box.length)];
+            switch(boxnumberx)
+            {
+
+              case 0: b0=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 1: b1=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 2: b2=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 3: b3=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 4: b4=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 5: b5=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 6: b6=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 7: b7=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              case 8: b8=Icon(Icons.clear, size: 70, color: Colors.black,); break;
+              default:break;
+
+            }
+
+          }
+
+
+
         cross.add(boxnumberx);
         box.remove(boxnumberx);
         // changing the turn
